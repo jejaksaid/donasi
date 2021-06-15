@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<title>Donasi SAR</title>
+		<link rel="manifest" href="#" />
+		<meta name="msapplication-TileColor" content="#111" />
+		<meta name="theme-color" content="#ffffff" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta name="keywords" content="Donasi SAR" />
+		<meta name="description" content="Matahati For Humanity" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- Favicons -->
+		<link href="image/logosar-e1596526465307.jpg" rel="icon" type="image/png" />
+		<link
+			href="https://bantumereka.aguspramono.com/assets/images/pengaturan/56544e029f94a4eae84d299ae935dd2c.png"
+			rel="apple-touch-icon"
+			type="image/png"
+		/>
+
+		<!-- Google Font: Source Sans Pro -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+		/>
+		<!-- Font Awesome Icons -->
+		<link
+			rel="stylesheet"
+			href="https://bantumereka.aguspramono.com/assets/back/plugins/fontawesome-free/css/all.min.css"
+		/>
+
+		<!-- SweetAlert2 -->
+		<link
+			rel="stylesheet"
+			href="https://bantumereka.aguspramono.com/assets/back/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css"
+		/>
+
+		<!-- Toastr -->
+		<link
+			rel="stylesheet"
+			href="https://bantumereka.aguspramono.com/assets/back/plugins/toastr/toastr.min.css"
+		/>
+
+		<!-- DataTables -->
+		<link
+			rel="stylesheet"
+			href="https://bantumereka.aguspramono.com/assets/back/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://bantumereka.aguspramono.com/assets/back/plugins/datatables-responsive/css/responsive.bootstrap4.min.css"
+		/>
+
+		<!-- overlayScrollbars -->
+		<link
+			rel="stylesheet"
+			href="https://bantumereka.aguspramono.com/assets/back/plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
+		/>
+
+		<!-- Theme style -->
+		<link
+			rel="stylesheet"
+			href="https://bantumereka.aguspramono.com/assets/back/dist/css/adminlte.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://bantumereka.aguspramono.com/assets/back/dist/css/mystyle.css"
+		/>
+
+		<script
+			type="text/javascript"
+			src="https://app.sandbox.midtrans.com/snap/snap.js"
+			data-client-key="SB-Mid-client-SamzR_V6MCGKFtSa"
+		></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+		<script
+			defer
+			data-key="beaceb69-75d5-46ee-907d-47582904bf51"
+			src="https://widget.tochat.be/bundle.js"
+		></script>
+
+		<style>
+			.bottomMenu1 {
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+				padding: 10px;
+				background-color: #f7f7f7;
+				z-index: 1;
+				transition: all 1s;
+				box-shadow: 1px 1px 5px grey;
+			}
+			.hide {
+				opacity: 0;
+				left: -100%;
+			}
+			.show {
+				opacity: 1;
+				left: 0;
+			}
+			#overlaymyproc {
+				background: #ffffff;
+				color: #666666;
+				position: fixed;
+				height: 100%;
+				width: 100%;
+				z-index: 5000;
+				top: 0;
+				left: 0;
+				float: left;
+				text-align: center;
+				padding-top: 25%;
+				display: none;
+			}
+
+			@media only screen and (max-width: 988px) {
+				#donasidesktop {
+					display: none;
+				}
+				#donasimobile {
+					display: block;
+				}
+				#donasimobile1 {
+					display: block;
+				}
+			}
+
+			@media only screen and (min-width: 988px) {
+				#donasimobile {
+					display: none;
+				}
+				#donasimobile1 {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body class="layout-top-nav layout-navbar-fixed">
+		<div class="wrapper">
+			<!-- Navbar -->
+			<nav
+				class="main-header navbar navbar-expand-md navbar-light navbar-white"
+			>
+				<div class="container">
+					<button
+						class="navbar-toggler order-2 ml-1"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarCollapse"
+						aria-controls="navbarCollapse"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<a href="#" class="navbar-brand">
+						<img
+							src="image/logosar-e1596526465307.jpg"
+							alt=""
+							class="brand-image img-circle"
+							style="opacity: 0.8"
+						/>
+					</a>
+
+					<div class="collapse navbar-collapse order-3" id="navbarCollapse">
+						<!-- Left navbar links -->
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a href="#" class="nav-link">Home</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Infaq</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Zakat</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Wakaf</a>
+							</li>
+						</ul>
+
+						<!-- SEARCH FORM -->
+						<form
+							class="form-inline ml-0 ml-md-3"
+							action="https://bantumereka.aguspramono.com/donasi/program"
+							method="get"
+						>
+							<div class="input-group input-group-sm">
+								<input
+									class="form-control form-control-navbar"
+									name="q"
+									type="search"
+									placeholder="Cari Program"
+									aria-label="Search"
+									size="50"
+								/>
+								<div class="input-group-append">
+									<button class="btn btn-navbar" type="submit">
+										<i class="fas fa-search"></i>
+									</button>
+								</div>
+							</div>
+						</form>
+
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a href="#" class="nav-link">Masuk / Daftar</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Right navbar links -->
+					<ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+						<li class="nav-item">
+							<a
+								href="ke program"
+								class="nav-link btn btn-sm btn-primary text-white"
+								style="background-color: #238ad9"
+								>Donasi Sekarang</a
+							>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- /.navbar -->
+			<!-- Content Wrapper. Contains page content -->
+			<div class="content-wrapper">
+				<div
+					id="carouselExampleIndicators"
+					class="carousel slide"
+					data-ride="carousel"
+				>
+					<ol class="carousel-indicators">
+						<li
+							data-target="#carouselExampleIndicators"
+							data-slide-to="0"
+							class="active"
+						></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img
+								class="d-block w-100"
+								src="https://bantumereka.aguspramono.com/assets/images/slide/58898fbf050547323f0dbc3509f7f270.jpg"
+								alt="First slide"
+								style="max-height: 500px"
+							/>
+						</div>
+					</div>
+					<a
+						class="carousel-control-prev"
+						href="#carouselExampleIndicators"
+						role="button"
+						data-slide="prev"
+					>
+						<span class="carousel-control-custom-icon" aria-hidden="true">
+							<i class="fas fa-chevron-left"></i>
+						</span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a
+						class="carousel-control-next"
+						href="#carouselExampleIndicators"
+						role="button"
+						data-slide="next"
+					>
+						<span class="carousel-control-custom-icon" aria-hidden="true">
+							<i class="fas fa-chevron-right"></i>
+						</span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+
+				<!-- Main content -->
+				<div class="content">
+					<div class="container mt-3">
+						<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+							<h4><strong>Bersihkan Harta, Sucikan Diri</strong></h4>
+							<p>Mari berbagi, untuk mensucikan harta kita.</p>
+						</div>
+
+						<div class="row flex-nowrap">
+							<div class="col-6">
+								<a
+									href="ke infaq"
+									class="btn btn-app btn-block bg-olive m-0 pt-4 pb-4 h-auto"
+								>
+									<h5><strong> Infaq Sekarang </strong></h5>
+								</a>
+							</div>
+							<div class="col-6">
+								<a
+									href="ke zakat"
+									class="btn btn-app btn-block bg-info m-0 pt-4 pb-4 h-auto"
+								>
+									<h5><strong> Tunaikan Zakat </strong></h5>
+								</a>
+							</div>
+						</div>
+						<!-- /.row -->
+					</div>
+					<!-- /.container-fluid -->
+
+					<!--
+     <div class="container" style="margin-top: 90px;margin-bottom:100px;">
+          <div class="card mb-5 shadow-none">
+          <div class="row no-gutters">
+            <div class="col-md-6">
+              <img src="https://bantumereka.aguspramono.com/assets/images/galangdana/257ffdffbfb2b57e2febcbc1d0986a57.jpg" class="card-img" alt="...">
+              <div class="text-muted shadow-sm" style="position: absolute;top: 8px;left: 16px;background-color:#fff;padding:5px;width:35px;height:35px;border-radius:50%;text-align:center;"><i class="fas fa-thumbtack"></i></div>
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    -->
+
+					<div class="container" style="margin-top: 90px; margin-bottom: 100px">
+						<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+							<h4><strong>Program Terbaru</strong></h4>
+							<p>
+								Pilih dan salurkan donasi untuk program yang berarti bagi Anda
+								dan mereka.
+							</p>
+						</div>
+
+						<div class="row">
+							<div class="col-md-4">
+								<a
+									href="https://bantumereka.aguspramono.com/donasi/program/mojang-jajaka-kabupaten-bandung-peduli-corona"
+								>
+									<div class="card mb-4 box-shadow">
+										<img
+											class="card-img-top"
+											data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+											alt="Thumbnail [100%x225]"
+											style="height: 225px; width: 100%; display: block"
+											src="https://bantumereka.aguspramono.com/assets/images/galangdana/257ffdffbfb2b57e2febcbc1d0986a57.jpg"
+											data-holder-rendered="true"
+										/>
+										<div class="card-body">
+											<p class="card-text text-muted" style="height: 60px">
+												<strong>Lorem Ipsum #7</strong>
+											</p>
+											<div class="progress rounded" style="height: 10px">
+												<div
+													class="progress-bar bg-info rounded"
+													role="progressbar"
+													aria-valuenow="0"
+													aria-valuemin="0"
+													aria-valuemax="100"
+													style="width: 0%; height: 10px"
+												></div>
+											</div>
+											<div
+												class="d-flex justify-content-between align-items-center"
+											>
+												<span class="float-left"
+													><small class="text-muted">Terkumpul</small
+													><br /><strong style="color: black"
+														>Rp.0</strong
+													></span
+												>
+												<span class="float-right text-right"
+													><small class="text-muted">Donatur</small
+													><br /><strong style="color: black">0</strong></span
+												>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+
+							<div class="col-md-4">
+								<a
+									href="https://bantumereka.aguspramono.com/donasi/program/kembalikan-senyum-anak-anak-palestina"
+								>
+									<div class="card mb-4 box-shadow">
+										<img
+											class="card-img-top"
+											data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+											alt="Thumbnail [100%x225]"
+											style="height: 225px; width: 100%; display: block"
+											src="https://bantumereka.aguspramono.com/assets/images/galangdana/a1807c7da7e1952ec8e391da89bf7e25.jpg"
+											data-holder-rendered="true"
+										/>
+										<div class="card-body">
+											<p class="card-text text-muted" style="height: 60px">
+												<strong>Lorem Ipsum #6</strong>
+											</p>
+											<div class="progress rounded" style="height: 10px">
+												<div
+													class="progress-bar bg-info rounded"
+													role="progressbar"
+													aria-valuenow="0"
+													aria-valuemin="0"
+													aria-valuemax="100"
+													style="width: 0%; height: 10px"
+												></div>
+											</div>
+											<div
+												class="d-flex justify-content-between align-items-center"
+											>
+												<span class="float-left"
+													><small class="text-muted">Terkumpul</small
+													><br /><strong style="color: black"
+														>Rp.0</strong
+													></span
+												>
+												<span class="float-right text-right"
+													><small class="text-muted">Donatur</small
+													><br /><strong style="color: black">0</strong></span
+												>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+
+							<div class="col-md-4">
+								<a
+									href="https://bantumereka.aguspramono.com/donasi/program/bantuan-donasi-pematangan-paru-paru-untuk-sapta"
+								>
+									<div class="card mb-4 box-shadow">
+										<img
+											class="card-img-top"
+											data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+											alt="Thumbnail [100%x225]"
+											style="height: 225px; width: 100%; display: block"
+											src="https://bantumereka.aguspramono.com/assets/images/galangdana/d68f434a99241d756ba8cfcc93d7d987.jpg"
+											data-holder-rendered="true"
+										/>
+										<div class="card-body">
+											<p class="card-text text-muted" style="height: 60px">
+												<strong>Lorem Ipsum #5</strong>
+											</p>
+											<div class="progress rounded" style="height: 10px">
+												<div
+													class="progress-bar bg-info rounded"
+													role="progressbar"
+													aria-valuenow="100"
+													aria-valuemin="0"
+													aria-valuemax="100"
+													style="width: 100%; height: 10px"
+												></div>
+											</div>
+											<div
+												class="d-flex justify-content-between align-items-center"
+											>
+												<span class="float-left"
+													><small class="text-muted">Terkumpul</small
+													><br /><strong style="color: black"
+														>Rp.1,355,000</strong
+													></span
+												>
+												<span class="float-right text-right"
+													><small class="text-muted">Donatur</small
+													><br /><strong style="color: black">7</strong></span
+												>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+
+							<div class="col-md-4">
+								<a
+									href="https://bantumereka.aguspramono.com/donasi/program/mbah-darsinah-nenek-berusia-67-tahun-harus-bertahan-hidup-dengan-mencari-kayu-bakar-walau-sudah-memasuki-usia-senja-dan-mengidap-penyakit-ambeien"
+								>
+									<div class="card mb-4 box-shadow">
+										<img
+											class="card-img-top"
+											data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+											alt="Thumbnail [100%x225]"
+											style="height: 225px; width: 100%; display: block"
+											src="https://bantumereka.aguspramono.com/assets/images/galangdana/d44b8845a2955d0a2cad254e0c91aee1.jpg"
+											data-holder-rendered="true"
+										/>
+										<div class="card-body">
+											<p class="card-text text-muted" style="height: 60px">
+												<strong>Lorem Ipsum #4</strong>
+											</p>
+											<div class="progress rounded" style="height: 10px">
+												<div
+													class="progress-bar bg-info rounded"
+													role="progressbar"
+													aria-valuenow="100"
+													aria-valuemin="0"
+													aria-valuemax="100"
+													style="width: 100%; height: 10px"
+												></div>
+											</div>
+											<div
+												class="d-flex justify-content-between align-items-center"
+											>
+												<span class="float-left"
+													><small class="text-muted">Terkumpul</small
+													><br /><strong style="color: black"
+														>Rp.0</strong
+													></span
+												>
+												<span class="float-right text-right"
+													><small class="text-muted">Donatur</small
+													><br /><strong style="color: black">0</strong></span
+												>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+
+							<div class="col-md-4">
+								<a
+									href="https://bantumereka.aguspramono.com/donasi/program/penggalangan-dana-untuk-mus-muliadi"
+								>
+									<div class="card mb-4 box-shadow">
+										<img
+											class="card-img-top"
+											data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+											alt="Thumbnail [100%x225]"
+											style="height: 225px; width: 100%; display: block"
+											src="https://bantumereka.aguspramono.com/assets/images/galangdana/2a0ab7ca485e4bd6fd248560ec2f85be.jpg"
+											data-holder-rendered="true"
+										/>
+										<div class="card-body">
+											<p class="card-text text-muted" style="height: 60px">
+												<strong>Lorem Ipsum #3</strong>
+											</p>
+											<div class="progress rounded" style="height: 10px">
+												<div
+													class="progress-bar bg-info rounded"
+													role="progressbar"
+													aria-valuenow="100"
+													aria-valuemin="0"
+													aria-valuemax="100"
+													style="width: 100%; height: 10px"
+												></div>
+											</div>
+											<div
+												class="d-flex justify-content-between align-items-center"
+											>
+												<span class="float-left"
+													><small class="text-muted">Terkumpul</small
+													><br /><strong style="color: black"
+														>Rp.0</strong
+													></span
+												>
+												<span class="float-right text-right"
+													><small class="text-muted">Donatur</small
+													><br /><strong style="color: black">0</strong></span
+												>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+
+							<div class="col-md-4">
+								<a
+									href="https://bantumereka.aguspramono.com/donasi/program/sedekah-biayai-pendidikan-18.000-yatim-dhuafa"
+								>
+									<div class="card mb-4 box-shadow">
+										<img
+											class="card-img-top"
+											data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+											alt="Thumbnail [100%x225]"
+											style="height: 225px; width: 100%; display: block"
+											src="https://bantumereka.aguspramono.com/assets/images/galangdana/2bfcf798aee9b24fda98f90cd94b6920.jpg"
+											data-holder-rendered="true"
+										/>
+										<div class="card-body">
+											<p class="card-text text-muted" style="height: 60px">
+												<strong>Lorem Ipsum #1</strong>
+											</p>
+											<div class="progress rounded" style="height: 10px">
+												<div
+													class="progress-bar bg-info rounded"
+													role="progressbar"
+													aria-valuenow="0"
+													aria-valuemin="0"
+													aria-valuemax="100"
+													style="width: 0%; height: 10px"
+												></div>
+											</div>
+											<div
+												class="d-flex justify-content-between align-items-center"
+											>
+												<span class="float-left"
+													><small class="text-muted">Terkumpul</small
+													><br /><strong style="color: black"
+														>Rp.0</strong
+													></span
+												>
+												<span class="float-right text-right"
+													><small class="text-muted">Donatur</small
+													><br /><strong style="color: black">0</strong></span
+												>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<div align="center">
+							<a
+								href="https://bantumereka.aguspramono.com/donasi/program"
+								class="btn btn-primary"
+								>Lihat Semua Program</a
+							>
+						</div>
+
+						<!-- /.row -->
+					</div>
+					<!-- /.container-fluid -->
+				</div>
+				<!-- /.content -->
+
+				<!-- Footer -->
+				<footer class="d-none d-lg-block">
+					<div
+						style="background-color: #238ad9; color: white; margin-top: 50px"
+					>
+						<div class="container">
+							<!-- Grid row-->
+							<div class="row py-4 d-flex align-items-center">
+								<!-- Grid column -->
+								<div
+									class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0"
+								>
+									<h6 class="mb-0">
+										Get connected with us on social networks!
+									</h6>
+								</div>
+								<!-- Grid column -->
+
+								<!-- Grid column -->
+								<div class="col-md-6 col-lg-7 text-center text-md-right">
+									<!-- Facebook -->
+									<a href="#" target="_blank" class="fb-ic text-white">
+										<i class="fab fa-facebook-f white-text mr-4"> </i>
+									</a>
+									<!-- Twitter -->
+									<a href="#" target="_blank" class="tw-ic text-white">
+										<i class="fab fa-twitter white-text mr-4"> </i>
+									</a>
+									<!--Youtube -->
+									<a href="#" target="_blank" class="li-ic text-white">
+										<i class="fab fa-youtube white-text mr-4"> </i>
+									</a>
+									<!--Instagram-->
+									<a href="#" target="_blank" class="ins-ic text-white">
+										<i class="fab fa-instagram white-text"> </i>
+									</a>
+								</div>
+								<!-- Grid column -->
+							</div>
+							<!-- Grid row-->
+						</div>
+					</div>
+
+					<!-- Footer Links -->
+					<div class="container text-center text-md-left mt-5">
+						<!-- Grid row -->
+						<div class="row">
+							<!-- Grid column -->
+							<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+								<!-- Content -->
+								<img
+									src="https://bantumereka.aguspramono.com/assets/images/pengaturan/298bc5f502cbba464efe3461711df633.png"
+									alt=""
+									class="img-fluid"
+									style="width: 100px"
+								/><br />
+								<h5 class="mt-3 mb-3">
+									<strong>Matahati For Humanity</strong>
+								</h5>
+								<p class="mt-2">
+									<strong>Alamat :</strong> Jl. Seroja Gg. Anggrek<br />
+									<strong>Email :</strong> agus.pramono3545@gmail.com<br />
+									<strong>Telepon :</strong> 0852703478988<br />
+									<strong>Call Center :</strong> -<br />
+								</p>
+							</div>
+							<!-- Grid column -->
+
+							<!-- Grid column -->
+							<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+								<!-- Links -->
+								<h6 class="text-uppercase font-weight-bold">Program</h6>
+								<hr
+									class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+									style="width: 60px"
+								/>
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/program/pendidikan"
+										target="_blank"
+										>Pendidikan</a
+									>
+								</p>
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/program/artikel"
+										target="_blank"
+										>Artikel</a
+									>
+								</p>
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/program/kesehatan"
+										target="_blank"
+										>Kesehatan</a
+									>
+								</p>
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/program/dakwah"
+										target="_blank"
+										>Dakwah</a
+									>
+								</p>
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/program/kemanusiaan"
+										target="_blank"
+										>Kemanusiaan</a
+									>
+								</p>
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/program/ekonomi"
+										target="_blank"
+										>Ekonomi</a
+									>
+								</p>
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/program/kemandirian-yatim-dan-dhuafa"
+										target="_blank"
+										>Kemandirian Yatim & Dhuafa</a
+									>
+								</p>
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/program/formulir-pengajuan-kursi-roda"
+										target="_blank"
+										>formulir pengajuan kursi roda</a
+									>
+								</p>
+							</div>
+							<!-- Grid column -->
+
+							<!-- Grid column -->
+							<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+								<!-- Links -->
+								<h6 class="text-uppercase font-weight-bold">Tentang Kami</h6>
+								<hr
+									class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+									style="width: 60px"
+								/>
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/about/sejarah"
+										target="_blank"
+										>Sejarah</a
+									>
+								</p>
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/about/visimisi"
+										target="_blank"
+										>Visi dan Misi</a
+									>
+								</p>
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/about/struktur"
+										target="_blank"
+										>Struktur</a
+									>
+								</p>
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/about/kantor"
+										target="_blank"
+										>Kantor Layanan</a
+									>
+								</p>
+
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/about/legal"
+										target="_blank"
+										>Legalitas</a
+									>
+								</p>
+
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/about/rekening"
+										target="_blank"
+										>Rekening</a
+									>
+								</p>
+							</div>
+							<!-- Grid column -->
+
+							<!-- Grid column -->
+							<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4">
+								<!-- Links -->
+								<h6 class="text-uppercase font-weight-bold">Layanan Web</h6>
+								<hr
+									class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+									style="width: 60px"
+								/>
+								<p>
+									<a href="#">Donasi</a>
+								</p>
+
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/download"
+										target="_blank"
+										>Download</a
+									>
+								</p>
+							</div>
+							<!-- Grid column -->
+
+							<!-- Grid column -->
+							<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4">
+								<!-- Links -->
+								<h6 class="text-uppercase font-weight-bold">Rubrik</h6>
+								<hr
+									class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+									style="width: 60px"
+								/>
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/berita"
+										target="_blank"
+										>Berita</a
+									>
+								</p>
+
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/artikel"
+										target="_blank"
+										>Artikel</a
+									>
+								</p>
+
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/video"
+										target="_blank"
+										>Video</a
+									>
+								</p>
+
+								<p>
+									<a
+										href="https://bantumereka.aguspramono.com/p/galeri"
+										target="_blank"
+										>Galeri</a
+									>
+								</p>
+							</div>
+							<!-- Grid column -->
+						</div>
+						<!-- Grid row -->
+					</div>
+					<!-- Footer Links -->
+
+					<!-- Copyright -->
+					<div class="footer-copyright text-center bg-dark py-3">
+						&copy; Copyright <strong><span>Matahati For Humanity</span></strong>
+					</div>
+					<!-- Copyright -->
+				</footer>
+				<!-- Footer -->
+			</div>
+			<!-- /.content-wrapper -->
+		</div>
+		<!-- ./wrapper -->
+
+		<!-- REQUIRED SCRIPTS -->
+
+		<!-- jQuery -->
+		<script src="https://bantumereka.aguspramono.com/assets/back/plugins/jquery/jquery.min.js"></script>
+		<!-- Bootstrap 4 -->
+		<script src="https://bantumereka.aguspramono.com/assets/back/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<!-- DataTables -->
+		<script src="https://bantumereka.aguspramono.com/assets/back/plugins/datatables/jquery.dataTables.min.js"></script>
+		<script src="https://bantumereka.aguspramono.com/assets/back/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+		<script src="https://bantumereka.aguspramono.com/assets/back/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+		<script src="https://bantumereka.aguspramono.com/assets/back/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+
+		<!-- SweetAlert2 -->
+		<script src="https://bantumereka.aguspramono.com/assets/back/plugins/sweetalert2/sweetalert2.min.js"></script>
+		<!-- Toastr -->
+		<script src="https://bantumereka.aguspramono.com/assets/back/plugins/toastr/toastr.min.js"></script>
+		<!-- overlayScrollbars -->
+		<script src="https://bantumereka.aguspramono.com/assets/back/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+		<!-- bs-custom-file-input -->
+		<script src="https://bantumereka.aguspramono.com/assets/back/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+		<!-- AdminLTE App -->
+		<script src="https://bantumereka.aguspramono.com/assets/back/dist/js/adminlte.min.js"></script>
+		<!-- AdminLTE for demo purposes -->
+		<script src="https://bantumereka.aguspramono.com/assets/back/dist/js/demo.js"></script>
+		<!-- Page specific script -->
+		<script>
+			$(function () {
+				bsCustomFileInput.init();
+				$("#example1").DataTable({
+					responsive: true,
+					autoWidth: false,
+				});
+				$("#example2").DataTable({
+					paging: true,
+					lengthChange: false,
+					searching: false,
+					ordering: true,
+					info: true,
+					autoWidth: false,
+					responsive: true,
+				});
+			});
+
+			$(function () {
+				var Toast = Swal.mixin({
+					toast: true,
+					position: "top-end",
+					showConfirmButton: false,
+					timer: 3000,
+				});
+
+				$(".swalDefaultSuccess").click(function () {
+					Toast.fire({
+						icon: "success",
+						title: " Berhasil disalin.",
+					});
+				});
+			});
+
+			function copyToClipboard(element) {
+				var $temp = $("<input>");
+				$("body").append($temp);
+				$temp.val($(element).text()).select();
+				document.execCommand("copy");
+				$temp.remove();
+			}
+		</script>
+	</body>
+</html>
