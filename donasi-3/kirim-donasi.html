@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<title>Kirim Donasi</title>
+		<link rel="manifest" href="https://bantumereka.aguspramono.com/" />
+		<meta name="msapplication-TileColor" content="#111" />
+		<meta name="theme-color" content="#ffffff" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta
+			name="keywords"
+			content="Donasi Online, Sedekah Online, Galang Dana Online, YAMAS, Yayasan Mata Air Syurgawi, Yayasan. Galang dana, Donasi, Sedekah"
+		/>
+		<meta name="description" content="Matahati For Humanity" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- Favicons -->
+		<link
+			href="https://bantumereka.aguspramono.com/assets/images/pengaturan/56544e029f94a4eae84d299ae935dd2c.png"
+			rel="icon"
+			type="image/png"
+		/>
+		<link
+			href="https://bantumereka.aguspramono.com/assets/images/pengaturan/56544e029f94a4eae84d299ae935dd2c.png"
+			rel="apple-touch-icon"
+			type="image/png"
+		/>
+
+		<!-- Google Font: Source Sans Pro -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+		/>
+		<!-- Font Awesome Icons -->
+		<link
+			rel="stylesheet"
+			href="https://bantumereka.aguspramono.com/assets/back/plugins/fontawesome-free/css/all.min.css"
+		/>
+
+		<!-- SweetAlert2 -->
+		<link
+			rel="stylesheet"
+			href="https://bantumereka.aguspramono.com/assets/back/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css"
+		/>
+
+		<!-- Toastr -->
+		<link
+			rel="stylesheet"
+			href="https://bantumereka.aguspramono.com/assets/back/plugins/toastr/toastr.min.css"
+		/>
+
+		<!-- DataTables -->
+		<link
+			rel="stylesheet"
+			href="https://bantumereka.aguspramono.com/assets/back/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://bantumereka.aguspramono.com/assets/back/plugins/datatables-responsive/css/responsive.bootstrap4.min.css"
+		/>
+
+		<!-- overlayScrollbars -->
+		<link
+			rel="stylesheet"
+			href="https://bantumereka.aguspramono.com/assets/back/plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
+		/>
+
+		<!-- Theme style -->
+		<link
+			rel="stylesheet"
+			href="https://bantumereka.aguspramono.com/assets/back/dist/css/adminlte.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://bantumereka.aguspramono.com/assets/back/dist/css/mystyle.css"
+		/>
+
+		<script
+			type="text/javascript"
+			src="https://app.sandbox.midtrans.com/snap/snap.js"
+			data-client-key="SB-Mid-client-SamzR_V6MCGKFtSa"
+		></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+		<script
+			defer
+			data-key="beaceb69-75d5-46ee-907d-47582904bf51"
+			src="https://widget.tochat.be/bundle.js"
+		></script>
+
+		<style>
+			.bottomMenu1 {
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+				padding: 10px;
+				background-color: #f7f7f7;
+				z-index: 1;
+				transition: all 1s;
+				box-shadow: 1px 1px 5px grey;
+			}
+			.hide {
+				opacity: 0;
+				left: -100%;
+			}
+			.show {
+				opacity: 1;
+				left: 0;
+			}
+			#overlaymyproc {
+				background: #ffffff;
+				color: #666666;
+				position: fixed;
+				height: 100%;
+				width: 100%;
+				z-index: 5000;
+				top: 0;
+				left: 0;
+				float: left;
+				text-align: center;
+				padding-top: 25%;
+				display: none;
+			}
+
+			@media only screen and (max-width: 988px) {
+				#donasidesktop {
+					display: none;
+				}
+				#donasimobile {
+					display: block;
+				}
+				#donasimobile1 {
+					display: block;
+				}
+			}
+
+			@media only screen and (min-width: 988px) {
+				#donasimobile {
+					display: none;
+				}
+				#donasimobile1 {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body class="layout-top-nav layout-navbar-fixed">
+		<div class="wrapper">
+			<!-- Navbar -->
+			<nav
+				class="main-header navbar navbar-expand-md navbar-light navbar-white"
+			>
+				<div class="container">
+					<button
+						class="navbar-toggler order-2 ml-1"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarCollapse"
+						aria-controls="navbarCollapse"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<a
+						href="https://bantumereka.aguspramono.com/donasi"
+						class="navbar-brand"
+					>
+						<img
+							src="https://bantumereka.aguspramono.com/assets/images/pengaturan/298bc5f502cbba464efe3461711df633.png"
+							alt=""
+							class="brand-image img-circle"
+							style="opacity: 0.8"
+						/>
+					</a>
+
+					<div class="collapse navbar-collapse order-3" id="navbarCollapse">
+						<!-- Left navbar links -->
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a
+									href="https://bantumereka.aguspramono.com/donasi"
+									class="nav-link"
+									>Home</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									href="https://bantumereka.aguspramono.com/donasi/infaq"
+									class="nav-link"
+									>Infaq</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									href="https://bantumereka.aguspramono.com/donasi/zakat"
+									class="nav-link"
+									>Zakat</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									href="https://bantumereka.aguspramono.com/donasi/wakaf"
+									class="nav-link"
+									>Wakaf</a
+								>
+							</li>
+						</ul>
+
+						<!-- SEARCH FORM -->
+						<form
+							class="form-inline ml-0 ml-md-3"
+							action="https://bantumereka.aguspramono.com/donasi/program"
+							method="get"
+						>
+							<div class="input-group input-group-sm">
+								<input
+									class="form-control form-control-navbar"
+									name="q"
+									type="search"
+									placeholder="Cari Program"
+									aria-label="Search"
+									size="50"
+								/>
+								<div class="input-group-append">
+									<button class="btn btn-navbar" type="submit">
+										<i class="fas fa-search"></i>
+									</button>
+								</div>
+							</div>
+						</form>
+
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a
+									href="https://bantumereka.aguspramono.com/masuk"
+									class="nav-link"
+									>Masuk / Daftar</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Right navbar links -->
+					<ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+						<li class="nav-item">
+							<a
+								href="https://bantumereka.aguspramono.com/donasi/program"
+								class="nav-link btn btn-sm btn-primary text-white"
+								style="background-color: #238ad9"
+								>Donasi Sekarang</a
+							>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- /.navbar -->
+			<section class="content">
+				<div class="container" style="margin-top: 90px; margin-bottom: 100px">
+					<div class="row d-flex justify-content-center">
+						<!-- left column -->
+						<div class="col-md-6">
+							<!-- general form elements -->
+							<div class="card pt-3 pb-3 pl-3 pr-3">
+								<div class="row">
+									<div class="col-md-12">
+										<span class="text-muted"
+											>Anda akan berdonasi untuk program:</span
+										><br />
+										<strong> Wakaf </strong>
+									</div>
+								</div>
+							</div>
+							<!-- /.card -->
+
+							<!-- general form elements -->
+							<div class="card">
+								<!-- form start -->
+								<form
+									id="payment-form"
+									action="https://bantumereka.aguspramono.com/donasi/finish"
+									method="post"
+								>
+									<input
+										type="hidden"
+										name="result_type"
+										id="result-type"
+										value=""
+									/>
+									<input
+										type="hidden"
+										name="result_data"
+										id="result-data"
+										value=""
+									/>
+
+									<input
+										type="hidden"
+										name="token"
+										id="token"
+										class="form-control"
+										value="gaRkEiSRwSVJU"
+									/>
+									<input
+										type="hidden"
+										name="jenisProgram"
+										id="jenisProgram"
+										class="form-control"
+										value="Campaign"
+									/>
+									<input
+										type="hidden"
+										name="namaProgram"
+										id="namaProgram"
+										class="form-control"
+										value="Lorem Ipsum #5"
+									/>
+									<div class="card-body">
+										<div class="form-group">
+											<label for="exampleInputEmail1"
+												>Nominal<span class="text-danger">*</span></label
+											>
+											<div class="input-group">
+												<div class="input-group-prepend">
+													<span class="input-group-text">Rp.</span>
+												</div>
+												<input
+													type="number"
+													name="nominal"
+													id="nominal"
+													class="form-control text-right number-separator"
+													min="10000"
+													required
+												/>
+											</div>
+
+											<div
+												class="col-md-12 mt-3"
+												style="
+													max-width: 100%;
+													overflow: scroll;
+													overflow-y: hidden;
+												"
+												id="scrollme"
+											>
+												<div class="btn-group radio-group">
+													<label class="btn btn-primary not-active"
+														>10.000
+														<input
+															type="radio"
+															value="10000"
+															id="nominalquick"
+															name="nominalquick"
+															onclick="passingHarga()"
+													/></label>
+													<label class="btn btn-primary not-active"
+														>25.000
+														<input
+															type="radio"
+															value="25000"
+															id="nominalquick"
+															name="nominalquick"
+															onclick="passingHarga()"
+													/></label>
+													<label class="btn btn-primary not-active"
+														>50.000
+														<input
+															type="radio"
+															value="50000"
+															id="nominalquick"
+															name="nominalquick"
+															onclick="passingHarga()"
+													/></label>
+													<label class="btn btn-primary not-active"
+														>100.000
+														<input
+															type="radio"
+															value="100000"
+															id="nominalquick"
+															name="nominalquick"
+															onclick="passingHarga()"
+													/></label>
+													<label class="btn btn-primary not-active"
+														>250.000
+														<input
+															type="radio"
+															value="250000"
+															id="nominalquick"
+															name="nominalquick"
+															onclick="passingHarga()"
+													/></label>
+													<label class="btn btn-primary not-active"
+														>500.000
+														<input
+															type="radio"
+															value="500000"
+															id="nominalquick"
+															name="nominalquick"
+															onclick="passingHarga()"
+													/></label>
+													<label class="btn btn-primary not-active"
+														>1.000.000
+														<input
+															type="radio"
+															value="1000000"
+															id="nominalquick"
+															name="nominalquick"
+															onclick="passingHarga()"
+													/></label>
+												</div>
+											</div>
+										</div>
+
+										<hr />
+
+										<div class="alert alert-info alert-dismissible">
+											<h5><i class="icon fas fa-info"></i> Info</h5>
+											Jika tidak mengisi Email maka tidak akan ada Notifikasi
+											bukti donasi.
+										</div>
+
+										<div id="overlaymyproc">
+											<img
+												src="https://go.isostech.com/hubfs/Imported_Blog_Media/loader.gif"
+												alt="Loading"
+											/><br />
+											Mohon menunggu, permintaan anda sedang kami proses
+										</div>
+
+										<div align="center" class="mt-5">
+											<a href="https://bantumereka.aguspramono.com/masuk"
+												><u>Masuk</u></a
+											>
+											atau lengkapi data berikut
+										</div>
+
+										<input
+											type="hidden"
+											name="IDMember"
+											id="IDMember"
+											value=""
+										/>
+										<input
+											type="hidden"
+											name="kodeFundraiser"
+											id="KodeFundraiser"
+											value=""
+										/>
+
+										<div class="form-group mt-4">
+											<input
+												type="text"
+												class="form-control"
+												name="namaLengkap"
+												id="namaLengkap"
+												placeholder="Nama Lengkap"
+												value=""
+												required
+											/>
+											<div class="form-check mt-1">
+												<input
+													type="checkbox"
+													class="form-check-input hambaAllah"
+													id="hambaAllah"
+												/>
+												<label
+													class="form-check-label text-muted"
+													for="hambaAllah"
+													><i>Sembunyikan nama (Hamba Allah)</i></label
+												>
+											</div>
+										</div>
+
+										<div class="form-group mt-3">
+											<input
+												type="number"
+												name="nomorHp"
+												class="form-control"
+												id="nope"
+												placeholder="Nomor Handphone"
+												value=""
+												onkeypress="return isNumber(event)"
+												required
+											/>
+										</div>
+
+										<div class="form-group mt-3">
+											<input
+												type="text"
+												name="email"
+												class="form-control"
+												id="email"
+												placeholder="E-Mail"
+												value=""
+												required
+											/>
+										</div>
+
+										<div class="form-group mt-3">
+											<textarea
+												name="dukungan"
+												class="form-control"
+												id="dukungan"
+												placeholder="Tulis pesan dan doa untuk program ini"
+											></textarea>
+										</div>
+									</div>
+									<!-- /.card-body -->
+
+									<div class="card-footer">
+										<button
+											class="btn btn-primary btn-block pt-3 pb-3"
+											id="pay-button"
+											style="background-color: #238ad9"
+										>
+											Konfirmasi Donasi
+										</button>
+									</div>
+								</form>
+							</div>
+							<!-- /.card -->
+						</div>
+						<!--/.col (left) -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container-fluid -->
+			</section>
+
+			<!-- jQuery -->
+			<script src="https://bantumereka.aguspramono.com/assets/back/plugins/jquery/jquery.min.js"></script>
+			<!-- Bootstrap 4 -->
+			<script src="https://bantumereka.aguspramono.com/assets/back/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+			<!-- AdminLTE App -->
+			<script src="https://bantumereka.aguspramono.com/assets/back/dist/js/adminlte.min.js"></script>
+			<!-- AdminLTE for demo purposes -->
+			<script src="https://bantumereka.aguspramono.com/assets/back/dist/js/demo.js"></script>
+			<script src="https://bantumereka.aguspramono.com/assets/vendor/easy-number-separator.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function () {
+					// Input radio-group visual controls
+					$(".radio-group label").on("click", function () {
+						$(this).removeClass("not-active").siblings().addClass("not-active");
+					});
+
+					$(".hambaAllah").on("click", function () {
+						if ($("input.hambaAllah").is(":checked")) {
+							document.getElementById("namaLengkap").value = "Hamba Allah";
+						}
+					});
+
+					$("#cekBank").on("click", function () {
+						if ($("#rekeningPembayaran").val() == "") {
+							alert("Harap pilih metode pembayaran");
+							return false;
+						} else {
+							return true;
+						}
+					});
+				});
+
+				function passingHarga() {
+					var values = document.getElementsByName("nominalquick");
+					var nominal = document.getElementsByName("nominal");
+
+					for (var i = 0; i < values.length; i++) {
+						if (values[i].checked == true) {
+							document.getElementById("nominal").value = values[i].value;
+						}
+					}
+				}
+
+				function rubahAngka(angka) {
+					var reverse = angka.toString().split("").reverse().join(""),
+						ribuan = reverse.match(/\d{1,3}/g);
+					ribuan = ribuan.join(",").split("").reverse().join("");
+					return ribuan;
+				}
+
+				function validateEmail(email) {
+					const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+					return re.test(email);
+				}
+
+				function isNumber(evt) {
+					evt = evt ? evt : window.event;
+					var charCode = evt.which ? evt.which : evt.keyCode;
+					if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+						return false;
+					}
+					return true;
+				}
+
+				$("#pay-button").click(function (event) {
+					event.preventDefault();
+					//$(this).attr("disabled", "disabled");
+
+					var token = $("#token").val();
+					var jenisProgram = $("#jenisProgram").val();
+					var namaProgram = $("#namaProgram").val();
+					var nominal = $("#nominal").val();
+					var nominal2 = $("#nominal").val();
+					var IDMember = $("#IDMember").val();
+					var kodeFundraiser = $("#kodeFundraiser").val();
+					var namaLengkap = $("#namaLengkap").val();
+					var nope = $("#nope").val();
+					var email = $("#email").val();
+					var dukungan = $("#dukungan").val();
+
+					var validasiAngka = /^[0-9]+$/;
+					nominal2 = nominal2.replace(",", "");
+					if (nominal2 < 10000) {
+						alert(
+							"Nominal tidak boleh kosong atau 0. Minimal nominal adalah 10.000"
+						);
+						return;
+					}
+
+					if (namaLengkap == "") {
+						alert("Harap isi nama Anda");
+						return;
+					}
+
+					if (nope == "") {
+						alert("Harap isi nomor telepon atau handphone Anda");
+						return;
+					}
+
+					if (email == "") {
+						alert("Harap isi email Anda");
+						return;
+					}
+
+					if (validateEmail(email)) {
+					} else {
+						alert("Email anda tidak valid");
+						return;
+					}
+
+					$.ajax({
+						type: "POST",
+						url: "https://bantumereka.aguspramono.com/donasi/token",
+						data: {
+							token: token,
+							jenisProgram: jenisProgram,
+							namaProgram: namaProgram,
+							nominal: nominal,
+							IDMember: IDMember,
+							kodeFundraiser: kodeFundraiser,
+							namaLengkap: namaLengkap,
+							nope: nope,
+							email: email,
+							dukungan: dukungan,
+						},
+						cache: false,
+
+						success: function (data) {
+							var resultType = document.getElementById("result-type");
+							var resultData = document.getElementById("result-data");
+
+							function changeResult(type, data) {
+								$("#result-type").val(type);
+								$("#result-data").val(JSON.stringify(data));
+							}
+
+							snap.pay(data, {
+								onSuccess: function (result) {
+									changeResult("success", result);
+									$("#payment-form").submit();
+									$("#overlaymyproc").fadeIn("slow");
+								},
+								onPending: function (result) {
+									changeResult("pending", result);
+									$("#payment-form").submit();
+									$("#overlaymyproc").fadeIn("slow");
+								},
+								onError: function (result) {
+									changeResult("error", result);
+									$("#payment-form").submit();
+									$("#overlaymyproc").fadeIn("slow");
+								},
+							});
+						},
+					});
+				});
+			</script>
+		</div>
+	</body>
+</html>
